@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            background-color: #F7F7F7;
+            font-family: '맑은 고딕';
+        }
+
+        p {
+            text-align: center;
+            margin-top: 7%;
+        }
+
+        .content {
+            margin-left: 27%;
+            padding: 2%;
+            width: 44%;
+            border: 1px solid lightgray;
+            box-shadow: 2px 2px 5px #808080;
+            background-color: white;
+        }
+        table{
+            margin-left:4%;
+        }
+        h2 {
+            font-weight: bold;
+        }
+
+        h5 {
+            font-weight: normal;
+            color: gray;
+        }
+
+        .login_button {
+            padding: 20px 45px;
+            font: 110% '맑은 고딕';
+            background-color: #3F84F5;
+            color: white;
+            border: 1px solid #3F84F5;
+        }
+
+            .login_button:hover {
+                background-color: #3E82F0;
+                border: 1px solid #2F5BB7;
+                text-shadow: 0px 2px 1px #2B5BA8;
+            }
+
+        a {
+            font: 100% '맑은 고딕';
+            color: dodgerblue;
+            text-decoration: none;
+        }
+
+            a:hover {
+                color: darkblue;
+            }
+        #title {
+            text-decoration: none;
+            color: #3F84F5;
+            font: 80% '맑은 고딕';
+            margin-top: 2%;
+        }
+            #title:hover {
+                color: darkblue;
+            }
+    </style>
+    <link type="text/css" rel="stylesheet" href="copyright_css.css" />
+    <title>로그인</title>
+</head>
+<body>
+    <div style="min-width:1200px;">
+
+        <a href="Gaagle.html" id="title" style="margin-left:80%">첫 화면으로 돌아가기</a>
+        <a href="Join.html" id="title">회원가입</a>
+        <p>
+            <a href="Gaagle.html"><img src="gaagle_sublogo.png" style="max-width:40%" /></a>
+
+        </p>
+        <div class="content">
+            <h2 style="margin-left:4%">&nbsp;회원 로그인</h2>
+            <form action=/Gaagle/login method=post>
+                <table cellspacing="10">
+                    <tr>
+                        <td><input type="text" name="ID"  size="30" placeholder="아이디" style="height:45px;font-size:120%;" /></td>
+                        <td rowspan="2"><input type="submit" class="login_button" id="LogID" value="로그인"></td>
+
+                    </tr>
+
+                    <tr>
+                        <td><input type="password" size="30" name="PASSWORD" placeholder="비밀번호" style="height:45px;font-size:120%;" /></td>
+                    </tr>
+                </table>
+            </form><br />
+            <h5>
+                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;아이디 또는 비밀번호를 잊어버리셨나요?&nbsp;&nbsp;
+                <a href="FindID_Password.html">아이디 </a>/<a href="FindID_Password.html"> 비밀번호 </a>찾기
+            </h5>
+
+        </div>
+        <br /><br />
+        <footer style="text-align:center">
+            COPYRIGHT © WANG'SMEN ALL RIGHTS RESERVED
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,730 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        p{
+            text-align : center;
+        }
+        .top {
+               background-color: rgba(66, 133, 244, 1.0);
+            padding: 1.2%;
+            max-width: 100%;
+            margin: -8px;
+           
+        }
+
+        .mypage_logout {
+            color: white;
+            font: normal 90% 'Century Gothic';
+            text-decoration: none;
+            padding: 1%;
+        }
+        
+            .mypage_logout:hover {
+                font-weight: bold;
+            }
+        .Search{
+            width : 90%; height:400px;
+            background : url(back.jpg);
+            background-size : 100% 100%;
+            margin : 0 auto;
+           
+        }
+        table{
+            text-align:center;
+            font:normal 210% '나눔손글씨 펜';
+            padding-left:6%;
+            padding-top:8%;
+            border-spacing:20px 10px;
+        }
+        select{
+            font:normal 43% '맑은 고딕';
+        }
+        h3{
+            text-align:center;
+            font:normal 250% '나눔손글씨 펜';
+            color:#676666;
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="copyright_css.css" />
+    <link type="text/css" rel="stylesheet" href="nav_css.css" />
+    <title>강의 검색</title>
+</head>
+<body>
+    <div style="min-width:1200px;">
+
+        <div class="top">
+            <a class="mypage_logout" href="http://catholic.ac.kr" style="text-align:left" target="_blank">학교 홈페이지</a>
+            <a class="mypage_logout" href="http://e-cyber.catholic.ac.kr" style="text-align:left" target="_blank">사이버캠퍼스</a>
+            <a class="mypage_logout" href="/Gaagle/logout" style="float:right; margin-right:2%; padding:0.2%;">LOGOUT</a>
+        </div>
+        <p>
+            <a href="Main.jsp"><img src="gaagle_sublogo.png" style="max-width:25%" /></a>
+        </p>
+        <nav>
+            <ul>
+                <li><a href="ClassSearch.html">/ 강의검색 /</a></li>
+                <li><a href="bbs-list">/ 자유게시판 /</a></li>
+                <li><a href="shoppingMain.html">/ 마일리지쇼핑 /</a></li>
+            </ul>
+        </nav>
+        <h3>강의검색 - LECTURE SEARCH</h3>
+        <div class="Search">
+            <div>
+                 <form action=/Gaagle/lecture method=get>
+                    <table>
+                        <tr>
+                            <td>학부</td>
+                            <td>학년</td>
+                            <td>유형</td>
+                            <td>교수님</td>
+                            <td>강의명</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="major">
+                                    <option value="전체">전체</option>
+                                    <option value="취업지원팀">취업지원팀</option>
+                                    <option value="현장실습지원센터">현장실습지원센터</option>
+                                    <option value="장업지원팀">장업지원팀</option>
+                                    <option value="국제교류처">국제교류처</option>
+                                    <option value="학부대학">학부대학</option>
+                                    <option value="인문학부>>국어국문학전공">인문학부>>국어국문학전공</option>
+                                    <option value="인문학부>>철학전공">인문학부>>철학전공</option>
+                                    <option value="인문학부>>국사학전공">인문학부>>국사학전공</option>
+                                    <option value="종교학과">종교학과</option>
+                                    <option value="프랑스어문화학과">프랑스어문화학과</option>
+                                    <option value="음악과">음악과</option>
+                                    <option value="영미언어문화학부">영미언어문화학부</option>
+                                    <option value="동아시아언어문화학부>>중국어문화전공">동아시아언어문화학부>>중국어문화전공</option>
+                                    <option value="동아시아언어문화학부>>일어일본문화전공">동아시아언어문화학부>>일어일본문화전공</option>
+                                    <option value="사회과학부>>사회복지학전공">사회과학부>>사회복지학전공</option>
+                                    <option value="사회과학부>>심리학전공">사회과학부>>심리학전공</option>
+                                    <option value="사회과학부>>사회학전공">사회과학부>>사회학전공</option>
+                                    <option value="경영학부>>경영학전공">경영학부>>경영학전공</option>
+                                    <option value="경영학부>>회계학전공">경영학부>>회계학전공</option>
+                                    <option value="국제학부">국제학부</option>
+                                    <option value="법정경학부>>법학전공">법정경학부>>법학전공</option>
+                                    <option value="법정경학부>>경제학전공">법정경학부>>경제학전공</option>
+                                    <option value="법정경학부>>행정학전공">법정경학부>>행정학전공</option>
+                                    <option value="특수교육과">특수교육과</option>
+                                    <option value="자연과학부>>화학전공">자연과학부>>화학전공</option>
+                                    <option value="자연과학부>>수학전공">자연과학부>>수학전공</option>
+                                    <option value="자연과학부>>물리학전공">자연과학부>>물리학전공</option>
+                                    <option value="생명·환경학부>>생명과학전공">생명·환경학부>>생명과학전공</option>
+                                    <option value="생명·환경학부>>생명공학전공">생명·환경학부>>생명공학전공</option>
+                                    <option value="생명·환경학부>>환경공학전공">생명·환경학부>>환경공학전공</option>
+                                    <option value="컴퓨터정보공학부">컴퓨터정보공학부</option>
+                                    <option value="정보통신전자공학부">정보통신전자공학부</option>
+                                    <option value="미디어기술콘텐츠학과">미디어기술콘텐츠학과</option>
+                                    <option value="생활과학부>>소비자주거학전공">생활과학부>>소비자주거학전공</option>
+                                    <option value="생활과학부>>의류학전공">생활과학부>>의류학전공</option>
+                                    <option value="생활과학부>>아동학전공">생활과학부>>아동학전공</option>
+                                    <option value="생활과학부>>식품영양학전공">생활과학부>>식품영양학전공</option>
+                                    <option value="약학과">약학과</option>
+                                    <option value="융복합트랙>>문화예술경영전문가융복합전공">융복합트랙>>문화예술경영전문가융복합전공</option>
+                                    <option value="융복합트랙>>스토리텔링융복합전공">융복합트랙>>스토리텔링융복합전공</option>
+                                    <option value="융복합트랙>>금융공학융복합전공">융복합트랙>>금융공학융복합전공</option>
+                                    <option value="융복합트랙>>의약나노바이오융복합전공">융복합트랙>>의약나노바이오융복합전공</option>
+                                    <option value="융복합트랙>>비즈니스리더융복합전공">융복합트랙>>비즈니스리더융복합전공</option>
+                                    <option value="융복합트랙>>모바일유비쿼터스융복합전공">융복합트랙>>모바일유비쿼터스융복합전공</option>
+                                    <option value="융복합트랙>>글로벌한국학융복합전공">융복합트랙>>글로벌한국학융복합전공</option>
+                                    <option value="융복합트랙>>글로벌인문경영융복합전공">융복합트랙>>글로벌인문경영융복합전공</option>
+                                    <option value="융복합트랙>>글로컬문화스토리텔링융복합전공">융복합트랙>>글로컬문화스토리텔링융복합전공</option>
+                                    <option value="융복합트랙>>스타트업융복합전공">융복합트랙>>스타트업융복합전공</option>
+                                    <option value="융복합트랙>>한국어교육융복합전공">융복합트랙>>한국어교육융복합전공</option>
+                                    <option value="교직과">교직과</option>
+                                    <option value="정보통신원">정보통신원</option>
+                                    <option value="국제언어교육원">국제언어교육원</option>
+                                    <option value="학생군사교육단">학생군사교육단</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="grade">
+                                    <option value="전체">전체</option>
+                                    <option value="1학년">1학년</option>
+                                    <option value="2학년">2학년</option>
+                                    <option value="3학년">3학년</option>
+                                    <option value="4학년">4학년</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="lectureType">
+                                    <option value="전체">전체</option>
+                                    <option value="자유선택교양">자교</option>
+                                    <option value="기초교양필수">기초</option>
+                                    <option value="중핵교양필수">중핵</option>
+                                    <option value="전공기초">전기</option>
+                                    <option value="사회봉사">사회봉사</option>
+                                    <option value="제1전공필수">전필1</option>
+                                    <option value="제1전공선택">전선1</option>
+                                    <option value="교직">교직</option>
+                                    <option value="평생교육">평생교육</option>
+                                    <option value="졸업연주">졸업연주</option>
+                                    <option value="트랙">트랙</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select name="teacherName">
+                                    <option value="전체">전체</option>
+                                    <option value="NAGATASAORI">NAGATASAORI</option>
+                                    <option value="강다영">강다영</option>
+                                    <option value="강미선">강미선</option>
+                                    <option value="강석우">강석우</option>
+                                    <option value="강성민">강성민</option>
+                                    <option value="강숙희">강숙희</option>
+                                    <option value="강영옥">강영옥</option>
+                                    <option value="강인구">강인구</option>
+                                    <option value="강인남">강인남</option>
+                                    <option value="강재구">강재구</option>
+                                    <option value="강한창">강한창</option>
+                                    <option value="강행봉">강행봉</option>
+                                    <option value="경일호">경일호</option>
+                                    <option value="계정연">계정연</option>
+                                    <option value="고려진">고려진</option>
+                                    <option value="고보민">고보민</option>
+                                    <option value="고재원">고재원</option>
+                                    <option value="고현아">고현아</option>
+                                    <option value="곽만순">곽만순</option>
+                                    <option value="곽미경">곽미경</option>
+                                    <option value="구민지">구민지</option>
+                                    <option value="구본만">구본만</option>
+                                    <option value="권성화">권성화</option>
+                                    <option value="권수영">권수영</option>
+                                    <option value="기리쉬">기리쉬</option>
+                                    <option value="김경자">김경자</option>
+                                    <option value="김경호">김경호</option>
+                                    <option value="김경희">김경희</option>
+                                    <option value="김관보">김관보</option>
+                                    <option value="김광식">김광식</option>
+                                    <option value="김기찬">김기찬</option>
+                                    <option value="김길수">김길수</option>
+                                    <option value="김남희">김남희</option>
+                                    <option value="김도원">김도원</option>
+                                    <option value="김마리">김마리</option>
+                                    <option value="김명수">김명수</option>
+                                    <option value="김백현">김백현</option>
+                                    <option value="김범준">김범준</option>
+                                    <option value="김병조">김병조</option>
+                                    <option value="김상도">김상도</option>
+                                    <option value="김석신">김석신</option>
+                                    <option value="김선아">김선아</option>
+                                    <option value="김선희">김선희</option>
+                                    <option value="김성훈">김성훈</option>
+                                    <option value="김성희">김성희</option>
+                                    <option value="김세서리아">김세서리아</option>
+                                    <option value="김세원">김세원</option>
+                                    <option value="김소영">김소영</option>
+                                    <option value="김수경">김수경</option>
+                                    <option value="김수호">김수호</option>
+                                    <option value="김순남">김순남</option>
+                                    <option value="김연진">김연진</option>
+                                    <option value="김영근">김영근</option>
+                                    <option value="김영두">김영두</option>
+                                    <option value="김영준">김영준</option>
+                                    <option value="김옥순">김옥순</option>
+                                    <option value="김용석">김용석</option>
+                                    <option value="김용수">김용수</option>
+                                    <option value="김용철">김용철</option>
+                                    <option value="김원경">김원경</option>
+                                    <option value="김윤관">김윤관</option>
+                                    <option value="김윤희">김윤희</option>
+                                    <option value="김은영">김은영</option>
+                                    <option value="김은정">김은정</option>
+                                    <option value="김은주">김은주</option>
+                                    <option value="김은화">김은화</option>
+                                    <option value="김은희">김은희</option>
+                                    <option value="김의진">김의진</option>
+                                    <option value="김의찬">김의찬</option>
+                                    <option value="김이균">김이균</option>
+                                    <option value="김인숙">김인숙</option>
+                                    <option value="김재일">김재일</option>
+                                    <option value="김재철">김재철</option>
+                                    <option value="김재호">김재호</option>
+                                    <option value="김정언">김정언</option>
+                                    <option value="김정은">김정은</option>
+                                    <option value="김정훈">김정훈</option>
+                                    <option value="김종윤">김종윤</option>
+                                    <option value="김종일">김종일</option>
+                                    <option value="김종진">김종진</option>
+                                    <option value="김종해">김종해</option>
+                                    <option value="김주원">김주원</option>
+                                    <option value="김주일">김주일</option>
+                                    <option value="김주현">김주현</option>
+                                    <option value="김준래">김준래</option>
+                                    <option value="김준석">김준석</option>
+                                    <option value="김중한">김중한</option>
+                                    <option value="김지선">김지선</option>
+                                    <option value="김지성">김지성</option>
+                                    <option value="김지연">김지연</option>
+                                    <option value="김지영">김지영</option>
+                                    <option value="김지윤">김지윤</option>
+                                    <option value="김지향">김지향</option>
+                                    <option value="김지현">김지현</option>
+                                    <option value="김지희">김지희</option>
+                                    <option value="김지나">김진나</option>
+                                    <option value="김진아">김진아</option>
+                                    <option value="김진희">김진희</option>
+                                    <option value="김찬우">김찬우</option>
+                                    <option value="김창배">김창배</option>
+                                    <option value="김창회">김창회</option>
+                                    <option value="김철현">김철현</option>
+                                    <option value="김충일">김충일</option>
+                                    <option value="김칠주">김칠주</option>
+                                    <option value="김필">김필</option>
+                                    <option value="김현주">김현주</option>
+                                    <option value="김형권">김형권</option>
+                                    <option value="김혜경">김혜경</option>
+                                    <option value="김희정">김희정</option>
+                                    <option value="김희주">김희주</option>
+                                    <option value="나은아">나은아</option>
+                                    <option value="나현오">나현오</option>
+                                    <option value="남승희">남승희</option>
+                                    <option value="남영란">남영란</option>
+                                    <option value="남재환">남재환</option>
+                                    <option value="남종호">남종호</option>
+                                    <option value="노상욱">노상욱</option>
+                                    <option value="노은영">노은영</option>
+                                    <option value="노태환">노태환</option>
+                                    <option value="노혜정">노혜정</option>
+                                    <option value="니콜라스 요한">니콜라스 요한</option>
+                                    <option value="니콜라스르럭스">니콜라스르럭스</option>
+                                    <option value="두해영">두해영</option>
+                                    <option value="라준영">라준영</option>
+                                    <option value="류양선">류양선</option>
+                                    <option value="류주연">류주연</option>
+                                    <option value="린위쑤안">린위쑤안</option>
+                                    <option value="마크앤클리프">마크앤클리프</option>
+                                    <option value="맹세호">맹세호</option>
+                                    <option value="맹영한">맹영한</option>
+                                    <option value="문시열">문시열</option>
+                                    <option value="문정환">문정환</option>
+                                    <option value="문혁준">문혁준</option>
+                                    <option value="문혜성">문혜성</option>
+                                    <option value="문혜진">문혜진</option>
+                                    <option value="민남현">민남현</option>
+                                    <option value="바실리">바실리</option>
+                                    <option value="박건영">박건영</option>
+                                    <option value="박경득">박경득</option>
+                                    <option value="박경모">박경모</option>
+                                    <option value="박경자">박경자</option>
+                                    <option value="박계원">박계원</option>
+                                    <option value="박광형">박광형</option>
+                                    <option value="박기환">박기환</option>
+                                    <option value="박덕준">박덕준</option>
+                                    <option value="박미경">박미경</option>
+                                    <option value="박미혜">박미혜</option>
+                                    <option value="박석희">박석희</option>
+                                    <option value="박성규">박성규</option>
+                                    <option value="박성식">박성식</option>
+                                    <option value="박성조">박성조</option>
+                                    <option value="박수찬">박수찬</option>
+                                    <option value="박승찬">박승찬</option>
+                                    <option value="박영식">박영식</option>
+                                    <option value="박오원">박오원</option>
+                                    <option value="박용일">박용일</option>
+                                    <option value="박우성">박우성</option>
+                                    <option value="박일영">박일영</option>
+                                    <option value="박일태">박일태</option>
+                                    <option value="박재현">박재현</option>
+                                    <option value="박정만">박정만</option>
+                                    <option value="박정진">박정진</option>
+                                    <option value="박정호">박정호</option>
+                                    <option value="박정흠">박정흠</option>
+                                    <option value="박종한">박종한</option>
+                                    <option value="박주식">박주식</option>
+                                    <option value="박주희">박주희</option>
+                                    <option value="박지영">박지영</option>
+                                    <option value="박지윤">박지윤</option>
+                                    <option value="박철">박철</option>
+                                    <option value="박태근">박태근</option>
+                                    <option value="박태준">박태준</option>
+                                    <option value="박희우">박희우</option>
+                                    <option value="박희찬">박희찬</option>
+                                    <option value="방금성">방금성</option>
+                                    <option value="방담이">방담이</option>
+                                    <option value="방미경">방미경</option>
+                                    <option value="방희경">방희경</option>
+                                    <option value="배대윤">배대윤</option>
+                                    <option value="배선옥">배선옥</option>
+                                    <option value="배수현">배수현</option>
+                                    <option value="배주채">배주채</option>
+                                    <option value="배창현">배창현</option>
+                                    <option value="배철민">배철민</option>
+                                    <option value="백민정">백민정</option>
+                                    <option value="백소연">백소연</option>
+                                    <option value="백승호">백승호</option>
+                                    <option value="백종훈">백종훈</option>
+                                    <option value="베네딕트드도미닉">베네딕트드도미닉</option>
+                                    <option value="부윤정">부윤정</option>
+                                    <option value="서경희">서경희</option>
+                                    <option value="서병진">서병진</option>
+                                    <option value="서성기">서성기</option>
+                                    <option value="서승완">서승완</option>
+                                    <option value="서인">서인</option>
+                                    <option value="서재홍">서재홍</option>
+                                    <option value="서채환">서채환</option>
+                                    <option value="서한석">서한석</option>
+                                    <option value="서효중">서효중</option>
+                                    <option value="성재열">성재열</option>
+                                    <option value="성효현">성호현</option>
+                                    <option value="손경락">손경락</option>
+                                    <option value="손경복">손경복</option>
+                                    <option value="손동희">손동희</option>
+                                    <option value="손숙미">손숙미</option>
+                                    <option value="손차혜">손차혜</option>
+                                    <option value="손호철">손호철</option>
+                                    <option value="송귀종">송귀종</option>
+                                    <option value="송윤주">송윤주</option>
+                                    <option value="송현진">송현진</option>
+                                    <option value="신계정">신계정</option>
+                                    <option value="신나래">신나래</option>
+                                    <option value="신동진">신동진</option>
+                                    <option value="신동환">신동환</option>
+                                    <option value="신승환">신승환</option>
+                                    <option value="신영예">신영예</option>
+                                    <option value="신원선">신원선</option>
+                                    <option value="신유림">신유림</option>
+                                    <option value="신유주">신유주</option>
+                                    <option value="신의선">신의선</option>
+                                    <option value="신주현">신주현</option>
+                                    <option value="신철">신철</option>
+                                    <option value="신혁진">신혁진</option>
+                                    <option value="신효영">신효영</option>
+                                    <option value="신희주">신희주</option>
+                                    <option value="심성용">심성용</option>
+                                    <option value="심영숙">심영숙</option>
+                                    <option value="심현주">심현주</option>
+                                    <option value="심혜정">심혜정</option>
+                                    <option value="안동호">안동호</option>
+                                    <option value="안보욱">안보욱</option>
+                                    <option value="안성윤">안성윤</option>
+                                    <option value="안성희">안성희</option>
+                                    <option value="안세영">안세영</option>
+                                    <option value="안세환">안세환</option>
+                                    <option value="안수정">안수정</option>
+                                    <option value="안용희">안용희</option>
+                                    <option value="안정국">안정국</option>
+                                    <option value="안토니 코레아">안토니 코레아</option>
+                                    <option value="안토니오 코벨로">안토니오 코벨로</option>
+                                    <option value="안홍선">안홍선</option>
+                                    <option value="양길석">양길석</option>
+                                    <option value="양덕순">양덕순</option>
+                                    <option value="양동휘">양동휘</option>
+                                    <option value="양성욱">양성욱</option>
+                                    <option value="양재원">양재원</option>
+                                    <option value="양정진">양정진</option>
+                                    <option value="양준석">양준석</option>
+                                    <option value="엄윤섭">엄윤섭</option>
+                                    <option value="에릭탐슨">에릭탐슨</option>
+                                    <option value="엘리자베스 루트">엘리자베스 루트</option>
+                                    <option value="예종영">예종영</option>
+                                    <option value="오경순">오경순</option>
+                                    <option value="오명숙">오명숙</option>
+                                    <option value="오민석">오민석</option>
+                                    <option value="오승희">오승희</option>
+                                    <option value="오영주">오영주</option>
+                                    <option value="오원석">오원석</option>
+                                    <option value="오의철">오의철</option>
+                                    <option value="오재원">오재원</option>
+                                    <option value="오혜경">오혜경</option>
+                                    <option value="오흥식">오흥식</option>
+                                    <option value="왕윤종">왕윤종</option>
+                                    <option value="요한라이너스">요한라이너스</option>
+                                    <option value="우두형">우두형</option>
+                                    <option value="우에무라 다카시">우에무라 다카시</option>
+                                    <option value="우환식">우환식</option>
+                                    <option value="위정호">위정호</option>
+                                    <option value="유금란">유금란</option>
+                                    <option value="유선정">유선정</option>
+                                    <option value="유연주">유연주</option>
+                                    <option value="유영선">유영선</option>
+                                    <option value="유은주">유은주</option>
+                                    <option value="유정원">유정원</option>
+                                    <option value="유현승">유현승</option>
+                                    <option value="유희">유희</option>
+                                    <option value="유희주">유희주</option>
+                                    <option value="육지훈">육지훈</option>
+                                    <option value="윤기동">윤기동</option>
+                                    <option value="윤명애">윤명애</option>
+                                    <option value="윤미경">윤미경</option>
+                                    <option value="윤미령">윤미령</option>
+                                    <option value="윤석원">윤석원</option>
+                                    <option value="윤세교">윤세교</option>
+                                    <option value="윤숙경">윤숙경</option>
+                                    <option value="윤신원">윤신원</option>
+                                    <option value="윤여임">윤여임</option>
+                                    <option value="윤운영">윤운영</option>
+                                    <option value="윤인선">윤인선</option>
+                                    <option value="윤정아">윤정아</option>
+                                    <option value="윤정우">윤정우</option>
+                                    <option value="윤준원">윤준원</option>
+                                    <option value="윤지선">윤지선</option>
+                                    <option value="윤혜영">윤혜영</option>
+                                    <option value="윤황">윤황</option>
+                                    <option value="은난순">은난순</option>
+                                    <option value="이경">이경</option>
+                                    <option value="이경례">이경례</option>
+                                    <option value="이경원">이경원</option>
+                                    <option value="이경화">이경화</option>
+                                    <option value="이계화">이계화</option>
+                                    <option value="이근">이근</option>
+                                    <option value="이기연">이기연</option>
+                                    <option value="이기웅">이기웅</option>
+                                    <option value="이남림">이남림</option>
+                                    <option value="이내현">이내현</option>
+                                    <option value="이동은">이동은</option>
+                                    <option value="이동현">이동현</option>
+                                    <option value="이두범">이두범</option>
+                                    <option value="이두진">이두진</option>
+                                    <option value="이문진">이문진</option>
+                                    <option value="이미숙">이미숙</option>
+                                    <option value="이미혜">이미혜</option>
+                                    <option value="이민희">이민희</option>
+                                    <option value="이벳트 머독">이벳트 머독</option>
+                                    <option value="이상국">이상국</option>
+                                    <option value="이상균">이상균</option>
+                                    <option value="이상민">이상민</option>
+                                    <option value="이상호">이상호</option>
+                                    <option value="이상훈">이상훈</option>
+                                    <option value="이석무">이석무</option>
+                                    <option value="이선영">이선영</option>
+                                    <option value="이선용">이선용</option>
+                                    <option value="이섭">이섭</option>
+                                    <option value="이세용">이세용</option>
+                                    <option value="이세주">이세주</option>
+                                    <option value="이소원">이소원</option>
+                                    <option value="이소현">이소현</option>
+                                    <option value="이수영">이수영</option>
+                                    <option value="이순근">이순근</option>
+                                    <option value="이승민">이승민</option>
+                                    <option value="이승은">이승은</option>
+                                    <option value="이승진">이승진</option>
+                                    <option value="이승희">이승희</option>
+                                    <option value="이시재">이시재</option>
+                                    <option value="이시현">이시현</option>
+                                    <option value="이연수">이연수</option>
+                                    <option value="이영석">이영석</option>
+                                    <option value="이영신">이영신</option>
+                                    <option value="이영종">이영종</option>
+                                    <option value="이영주">이영주</option>
+                                    <option value="이영태">이영태</option>
+                                    <option value="이영혜">이영혜</option>
+                                    <option value="이영호">이영호</option>
+                                    <option value="이용표">이용표</option>
+                                    <option value="이원봉">이원봉</option>
+                                    <option value="이원석">이원석</option>
+                                    <option value="이유진">이유진</option>
+                                    <option value="이윤희">이윤희</option>
+                                    <option value="이은배">이은배</option>
+                                    <option value="이은성">이은성</option>
+                                    <option value="이은주">이은주</option>
+                                    <option value="이인규">이인규</option>
+                                    <option value="이일령">이일령</option>
+                                    <option value="이일형">이일형</option>
+                                    <option value="이재영">이재영</option>
+                                    <option value="이정민">이정민</option>
+                                    <option value="이정선">이정선</option>
+                                    <option value="이종석">이종석</option>
+                                    <option value="이종숙">이종숙</option>
+                                    <option value="이종원">이종원</option>
+                                    <option value="이종현">이종현</option>
+                                    <option value="이주영">이주영</option>
+                                    <option value="이지양">이지양</option>
+                                    <option value="이창봉">이창봉</option>
+                                    <option value="이창우">이창우</option>
+                                    <option value="이춘혜">이춘혜</option>
+                                    <option value="이태규">이태규</option>
+                                    <option value="이택동">이택동</option>
+                                    <option value="이하규">이하규</option>
+                                    <option value="이향애">이향애</option>
+                                    <option value="이현주">이현주</option>
+                                    <option value="이혜원">이혜원</option>
+                                    <option value="이홍민">이홍민</option>
+                                    <option value="이화정">이화정</option>
+                                    <option value="이희경">이희경</option>
+                                    <option value="이희재">이희재</option>
+                                    <option value="임경미">임경미</option>
+                                    <option value="임선정">임선정</option>
+                                    <option value="임성실">임성실</option>
+                                    <option value="임신원">임신원</option>
+                                    <option value="임영임">임영임</option>
+                                    <option value="임재의">임재의</option>
+                                    <option value="임정석">임정석</option>
+                                    <option value="임진영">임진영</option>
+                                    <option value="임학순">임학순</option>
+                                    <option value="장동하">장동하</option>
+                                    <option value="장미애">장미애</option>
+                                    <option value="장상필">장상필</option>
+                                    <option value="장성숙">장성숙</option>
+                                    <option value="장양광">장양광</option>
+                                    <option value="장영아">장영아</option>
+                                    <option value="장유철">장유철</option>
+                                    <option value="장익현">장익현</option>
+                                    <option value="장혜성">장혜성</option>
+                                    <option value="장혜영">장혜영</option>
+                                    <option value="장홍석">장홍석</option>
+                                    <option value="전경숙">전경숙</option>
+                                    <option value="전남일">전남일</option>
+                                    <option value="전두병">전두병</option>
+                                    <option value="전병호">전병호</option>
+                                    <option value="전은다">전은다</option>
+                                    <option value="전인태">전인태</option>
+                                    <option value="전종연">전종연</option>
+                                    <option value="전종일">전종일</option>
+                                    <option value="전준헌">전준헌</option>
+                                    <option value="전현실">전현실</option>
+                                    <option value="전혜찬">전혜찬</option>
+                                    <option value="전희경">전희경</option>
+                                    <option value="전희진">전희진</option>
+                                    <option value="정남운">정남운</option>
+                                    <option value="정명희">정명희</option>
+                                    <option value="정미렴">정미렴</option>
+                                    <option value="정부성">정부성</option>
+                                    <option value="정선희">정선희</option>
+                                    <option value="정성엽">정성엽</option>
+                                    <option value="정성원">정성원</option>
+                                    <option value="정승재">정승재</option>
+                                    <option value="정연주">정연주</option>
+                                    <option value="정연태">정연태</option>
+                                    <option value="정영금">정영금</option>
+                                    <option value="정영석">정영석</option>
+                                    <option value="정영주">정영주</option>
+                                    <option value="정윤경">정윤경</option>
+                                    <option value="정윤재">정윤재</option>
+                                    <option value="정윤찬">정윤찬</option>
+                                    <option value="정은기">정은기</option>
+                                    <option value="정재영">정재영</option>
+                                    <option value="정종원">정종원</option>
+                                    <option value="정종진">정종진</option>
+                                    <option value="정주영">정주영</option>
+                                    <option value="정준영">정준영</option>
+                                    <option value="정지희">정지희</option>
+                                    <option value="정진원">정진원</option>
+                                    <option value="정창록">정창록</option>
+                                    <option value="정현석">정현석</option>
+                                    <option value="정혜경">정혜경</option>
+                                    <option value="정혜진">정혜진</option>
+                                    <option value="조강주">조강주</option>
+                                    <option value="조규희">조규희</option>
+                                    <option value="조도순">조도순</option>
+                                    <option value="조돈문">조돈문</option>
+                                    <option value="조성호">조성호</option>
+                                    <option value="조영주">조영주</option>
+                                    <option value="조용연">조용연</option>
+                                    <option value="조원주">조원주</option>
+                                    <option value="조윤아">조윤아</option>
+                                    <option value="조재한">조재한</option>
+                                    <option value="조정미">조정미</option>
+                                    <option value="조지연">조지연</option>
+                                    <option value="조현구">조현구</option>
+                                    <option value="조형래">조형래</option>
+                                    <option value="주성돈">주성돈</option>
+                                    <option value="주성렬">주성렬</option>
+                                    <option value="지신호">지신호</option>
+                                    <option value="지영현">지영현</option>
+                                    <option value="지재구">지재구</option>
+                                    <option value="차현주">차현주</option>
+                                    <option value="채웅석">채웅석</option>
+                                    <option value="채원호">채원호</option>
+                                    <option value="채진석">채진석</option>
+                                    <option value="천경희">천경희</option>
+                                    <option value="천미수">천미수</option>
+                                    <option value="최가희">최가희</option>
+                                    <option value="최국한">최국한</option>
+                                    <option value="최나야">최나야</option>
+                                    <option value="최동신">최동신</option>
+                                    <option value="최명걸">최명걸</option>
+                                    <option value="최미호">최미호</option>
+                                    <option value="최병관">최병관</option>
+                                    <option value="최상호">최상호</option>
+                                    <option value="최선경">최선경</option>
+                                    <option value="최선형">최선형</option>
+                                    <option value="최선희">최선희</option>
+                                    <option value="최연주">최연주</option>
+                                    <option value="최우혁">최우혁</option>
+                                    <option value="최유림">최유림</option>
+                                    <option value="최윤영">최윤영</option>
+                                    <option value="최윤주">최윤주</option>
+                                    <option value="최윤희">최윤희</option>
+                                    <option value="최은실">최은실</option>
+                                    <option value="최은희">최은희</option>
+                                    <option value="최이선">최이선</option>
+                                    <option value="최정근">최정근</option>
+                                    <option value="최정열">최정열</option>
+                                    <option value="최정호">최정호</option>
+                                    <option value="최종윤">최종윤</option>
+                                    <option value="최주용">최주용</option>
+                                    <option value="최진묵">최진묵</option>
+                                    <option value="최진성">최진성</option>
+                                    <option value="최진일">최진일</option>
+                                    <option value="최창열">최창열</option>
+                                    <option value="최창완">최창완</option>
+                                    <option value="최현옥">최현옥</option>
+                                    <option value="최현정">최현정</option>
+                                    <option value="최혜영">최혜영</option>
+                                    <option value="최혜정">최혜정</option>
+                                    <option value="최호영">최호영</option>
+                                    <option value="최효선">최효선</option>
+                                    <option value="최희진">최희진</option>
+                                    <option value="코넬리스 비사지예">코넬리스 비사지예</option>
+                                    <option value="코리엔르럭스">코리엔르럭스</option>
+                                    <option value="패트릭내이">패트릭내이</option>
+                                    <option value="페니시 에밀리아노">페니시 에밀리아노</option>
+                                    <option value="피터 젠킨슨">피터 젠킨슨</option>
+                                    <option value="하병학">하병학</option>
+                                    <option value="하영미">하영미</option>
+                                    <option value="하주연">하주연</option>
+                                    <option value="하주형">하주형</option>
+                                    <option value="한기봉">한기봉</option>
+                                    <option value="한길석">한길석</option>
+                                    <option value="한동훈">한동훈</option>
+                                    <option value="한모니까">한모니까</option>
+                                    <option value="한승훈">한승훈</option>
+                                    <option value="한영균">한영균</option>
+                                    <option value="한영만">한영만</option>
+                                    <option value="한영빈">한영빈</option>
+                                    <option value="한옥미">한옥미</option>
+                                    <option value="한혜경">한혜경</option>
+                                    <option value="한혜선">한혜선</option>
+                                    <option value="함병현">함병현</option>
+                                    <option value="함채원">함채원</option>
+                                    <option value="허인">허인</option>
+                                    <option value="허진아">허진아</option>
+                                    <option value="허태구">허태구</option>
+                                    <option value="허태회">허태회</option>
+                                    <option value="현남숙">현남숙</option>
+                                    <option value="홍기돈">홍기돈</option>
+                                    <option value="홍승연">홍승연</option>
+                                    <option value="홍연금">홍연금</option>
+                                    <option value="홍영진">홍영진</option>
+                                    <option value="홍지영">홍지영</option>
+                                    <option value="홍진표">홍진표</option>
+                                    <option value="홍진후">홍진후</option>
+                                    <option value="황병연">황병연</option>
+                                    <option value="황윤의">황윤의</option>
+                                    <option value="황의조">황의조</option>
+                                    <option value="황진주">황진주</option>
+                                    <option value="황혜진">황혜진</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="text" style="font-size:45%" name="lectureName" />
+                            </td>
+                            <td style="border-spacing:0">
+                                <input type="image" src="search.png" width="50" height="50" />
+                            </td>
+                        </tr>
+                    </table>
+
+                </form>
+            </div>
+        </div>
+        <footer style="text-align:center">
+            COPYRIGHT © WANG'SMEN ALL RIGHTS RESERVED
+        </footer>
+    </div>
+</body>
+</html>
